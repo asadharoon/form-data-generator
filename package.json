@@ -6,7 +6,11 @@
   "types": "dist/index.d.ts",
   "author": "Asad Haroon",
   "license": "MIT",
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadharoon/form-data-generator.git"
+  },
+  "keywords": ["FormData", "React","HTML","JS"],
   "scripts": {
     "build":"tsc"
   }

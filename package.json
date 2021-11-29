@@ -1,0 +1,17 @@
+{
+  "name": "form-data-generator",
+  "version": "1.0.0",
+  "description": "Form Data generator for frontend",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Asad Haroon",
+  "license": "MIT",
+
+  "scripts": {
+    "build":"tsc"
+  }
+  ,
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}

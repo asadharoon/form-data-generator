@@ -1,6 +1,6 @@
 {
-  "name": "form-data-generator",
-  "version": "1.0.0",
+  "name": "@asadharoon/form-data-generator",
+  "version": "1.2.0",
   "description": "Form Data generator for frontend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,12 +10,28 @@
     "type": "git",
     "url": "git+https://github.com/asadharoon/form-data-generator.git"
   },
-  "keywords": ["FormData", "React","HTML","JS"],
+  "keywords": [
+    "FormData",
+    "React",
+    "HTML",
+    "JS"
+  ],
   "scripts": {
-    "build":"tsc"
-  }
-  ,
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": " npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
   "devDependencies": {
+    "prettier": "^2.5.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "@asadharoon/form-data-generator": "^1.0.0"
   }
 }

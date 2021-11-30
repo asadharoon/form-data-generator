@@ -9,8 +9,9 @@ export const generateFormData = (formData:FormData, values:any, prevKey:string =
         } 
         if (Array.isArray(val)) {
           // is array
-          if (prevKey == '') {
-          } else key = prevKey + '[' + key + ']';
+          if (prevKey !== '') {
+            key = prevKey + '[' + key + ']';
+          } 
   
           generateFormData(formData, val, key);
         } else if (typeof val === "object") {

@@ -1,7 +1,6 @@
 'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-exports.generateFormData = function (formData, values, prevKey, exclude) {
+let formData = new FormData();
+const generateFormData = function (formData, values, prevKey, exclude) {
   if (prevKey === void 0) {
     prevKey = '';
   }
@@ -16,15 +15,17 @@ exports.generateFormData = function (formData, values, prevKey, exclude) {
       }
       if (Array.isArray(val)) {
         // is array
-        key = prevKey + '[' + key + ']';
-        exports.generateFormData(formData, val, key);
+        if (prevKey == '') {
+        } else key = prevKey + '[' + key + ']';
+
+        generateFormData(formData, val, key);
       } else if (typeof val === 'object') {
         // is object
         var pKey = key;
         if (prevKey !== '') {
           pKey = prevKey + '[' + key + ']';
         }
-        exports.generateFormData(formData, val, pKey);
+        generateFormData(formData, val, pKey);
       } else {
         // key value pair
         if (prevKey === '') {
@@ -37,4 +38,8 @@ exports.generateFormData = function (formData, values, prevKey, exclude) {
   }
   return;
 };
-exports.generateFormData(formData, { projects: [{ name: 'P1', roles: ['R1', 'R2'] }] }, '');
+generateFormData(formData, { projects: [{ name: 'P1', roles: ['R1', 'R2'] }] }, '');
+
+for (let key of formData.entries()) {
+  console.log(`${key[0]}: ${key[1]}`);
+}

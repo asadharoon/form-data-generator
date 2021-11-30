@@ -3,9 +3,11 @@
 
 
 "@asadharoon/form-data-generator@^1.0.0":
-  "integrity" "sha512-H+OTkg/GDJ9LAEice3VQy4NzUlQB1ZaQ+2ixE2eRzjq6BA4rbj5RXklBS7W9q2RZEAxN8uY13Jj4fBg4IDiFbA=="
-  "resolved" "https://registry.npmjs.org/@asadharoon/form-data-generator/-/form-data-generator-1.0.0.tgz"
-  "version" "1.0.0"
+  "integrity" "sha512-qoHenrbnWkWBj/1LSW8we4lQDPniaGq7vC0ft0pbXw9QuhbcsAv8pr/s7+lck099Hv+fggq0tUFwekkKGkY3wA=="
+  "resolved" "https://registry.npmjs.org/@asadharoon/form-data-generator/-/form-data-generator-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "@asadharoon/form-data-generator" "^1.0.0"
 
 "@babel/code-frame@^7.0.0":
   "integrity" "sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA=="

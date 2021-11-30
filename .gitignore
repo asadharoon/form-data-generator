@@ -1,2 +1,4 @@
 dist
 node_modules
+src/abc.js
+src/index.html
